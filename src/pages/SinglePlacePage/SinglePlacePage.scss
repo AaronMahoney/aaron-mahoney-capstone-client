@@ -1,0 +1,53 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.placecard-wrapper {
+    margin: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.placecard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $nf-red;
+        padding: 1.5rem;
+        border-radius: 5px;
+        max-width: 800px;
+    }
+
+    &-title {
+        color: $nf-yellow;
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    &-image {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 8px;
+    }
+
+    &-location {
+        color: $nf-yellow;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+
+    &-description {
+        color: $nf-yellow;
+        text-align: center;
+        line-height: 1.5;
+        margin-top: 0.5rem;
+    }
+}

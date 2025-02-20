@@ -8,12 +8,12 @@ function Header() {
       <nav className="header-nav">
         <ul className="header-nav__list">
           <Link to="/about"><li className="header-nav__item">About</li></Link>
-          <li className="header-nav__item">Places</li>
+          <Link to="/places"><li className="header-nav__item">Places</li></Link>
         </ul>
         <Link to="/"><img className="header-nav__image" src={islandIcon} alt="Newfoundland" /></Link>
         <ul className="header-nav__list">
           <li className="header-nav__item">People</li>
-          <li className="header-nav__item">Sayings</li>
+          <Link to="/sayings"><li className="header-nav__item">Sayings</li></Link>
         </ul>
       </nav>
     </header>
