@@ -4,6 +4,8 @@
 
 .mainpage {
     margin: 0 0.5rem;
+    padding-bottom: 3.5rem;
+    background-color: #f8f8f8;
 }
 
 .hero {
@@ -11,13 +13,15 @@
     background-image: url('../../assets/images/St_John\'s_Harbour.jpg');
     background-size: cover;
     background-position: right;
-    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 1rem;
+    height: 50vh;
+    z-index: 1;
+    margin-bottom: 2.5rem;
 }
 
 .hero::before {
@@ -37,7 +41,7 @@
     font-size: 3rem;
     font-weight: bold;
     margin: 0;
-    margin-top: -15rem;
+    margin-top: -7rem;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
@@ -49,4 +53,12 @@
     margin-top: 0.5rem;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.map-container {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    z-index: 0;
+    margin-top: 0;
 }

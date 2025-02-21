@@ -4,4 +4,32 @@
 
 .saying-details {
     margin: 0 0.5rem;
+    background-color: #f8f8f8;
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-weight: 400;
+        text-align: center;
+        max-width: 90%;
+        word-break: break-word;
+    }
+
+    &__explanation {
+        font-size: 1rem;
+    }
+
+    &__used {
+        font-size: 1rem;
+    }
+
+    &__image {
+        width: 100%;
+    }
 }

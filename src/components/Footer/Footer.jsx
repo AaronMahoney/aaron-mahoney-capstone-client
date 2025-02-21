@@ -1,12 +1,13 @@
 import './Footer.scss';
-import mainFlag from "../../assets/images/flag1.png";
+import { Link } from 'react-router-dom';
+import mainFlag from "../../assets/images/flag2.png";
 
 function Footer() {
   return (
     <div className="footer">
       <div className="footer-container">
         <div className="footer-content">
-          <h3 className="footer-content__title">After looking around, don't forget to sign the guidebook!</h3>
+          <Link to="/guidebook"><h3 className="footer-content__title">After looking around, don't forget to sign the guidebook!</h3></Link>
           <img className="footer-content__image" src={mainFlag} alt="newfoundland flag" />
           <div className="footer-text">
             <p className="footer-text__info">© 2025</p>

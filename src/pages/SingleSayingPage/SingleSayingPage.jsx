@@ -26,7 +26,7 @@ function SingleSayingPage() {
     return (
         <div className="saying-details">
             <div className="saying-details__card">
-                <h2 className="sayings-details__title">{saying.saying_title}</h2>
+                <h2 className="saying-details__title">{saying.saying_title}</h2>
                 <p className="saying-details__explanation">Explanation: {saying.saying_explanation}</p>
                 <p className="saying-details__used">Example: {saying.saying_used}</p>
                 <img className="saying-details__image" src={saying.saying_photo} />
