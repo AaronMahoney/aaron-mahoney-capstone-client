@@ -12,7 +12,7 @@ function Header() {
         </ul>
         <Link to="/"><img className="header-nav__image" src={islandIcon} alt="Newfoundland" /></Link>
         <ul className="header-nav__list">
-          <li className="header-nav__item">People</li>
+          <Link to="/people"><li className="header-nav__item">People</li></Link>
           <Link to="/sayings"><li className="header-nav__item">Sayings</li></Link>
         </ul>
       </nav>

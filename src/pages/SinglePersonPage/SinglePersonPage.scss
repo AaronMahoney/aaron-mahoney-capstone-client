@@ -1,0 +1,41 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.single-person__page {
+    margin: 0 0.5rem;
+}
+
+.personcard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &-image {
+        width: 100%;
+        height: auto;
+    }
+
+    &-name {
+        font-size: 1.5rem;
+    }
+
+    &-occupation {
+        font-size: 1.25rem;
+    }
+
+    &-history {
+        font-size: 1rem;
+    }
+}
+
+.personcard-history p {
+    margin-bottom: 0.5rem;
+}
