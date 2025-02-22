@@ -8,6 +8,7 @@
     gap: 2rem;
 
     &-item {
+        width: 100%;
         margin-bottom: 1rem;
         padding: 1rem;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -32,5 +33,35 @@
     &-image {
         width: 100%;
         border-radius: 10px;
+    }
+
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 85%;
+        gap: 1.5rem;
+
+        &-item {
+            width: 48%;
+            margin-bottom: 2rem;
+            min-height: 300px;
+        }
+
+        &-content {
+            gap: 1rem;
+        }
+
+        &-name {
+            font-size: 1.75rem;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+
+        &-image {
+            width: 75%;
+            height: 200px;
+            object-fit: cover;
+        }
     }
 }

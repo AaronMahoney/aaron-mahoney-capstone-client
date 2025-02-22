@@ -15,6 +15,14 @@
         gap: 1rem;
         font-size: 1rem;
     }
+
+    @include tablet {
+
+        &-text {
+            gap: 2rem;
+            font-size: 1.5rem;
+        }
+    }
 }
 
 .footer-container {
@@ -39,5 +47,19 @@
         width: 85%;
         padding: 1rem;
         flex-shrink: 0;
+    }
+
+    @include tablet {
+        gap: 1rem;
+        
+        &__title {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        &__image {
+            padding: 0.5rem;
+            width: 75%;
+        }
     }
 }
