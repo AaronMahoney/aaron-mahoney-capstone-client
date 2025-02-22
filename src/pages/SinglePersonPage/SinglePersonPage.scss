@@ -4,6 +4,13 @@
 
 .single-person__page {
     margin: 0 0.5rem;
+    background-color: $nf-blue;
+
+    @include tablet {
+        margin: 0;
+        width: 100%;
+        margin-bottom: 4rem;
+    }
 }
 
 .personcard {
@@ -23,16 +30,65 @@
         height: auto;
     }
 
+    &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
     &-name {
         font-size: 1.5rem;
+        color: $nf-white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
     &-occupation {
         font-size: 1.25rem;
+        color: $nf-white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
     &-history {
         font-size: 1rem;
+        color: $nf-white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    @include tablet {
+
+        &-item {
+            flex-direction: row;
+            align-items: flex-start;
+            margin-top: 1rem;
+            gap: 1rem;
+        }
+
+        &-image {
+            width: 40%;
+            flex-shrink: 0;
+            max-height: 18rem;
+            object-fit: contain;
+        }
+
+        &-content {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &-name {
+            font-size: 2rem;
+        }
+
+        &-occupation {
+            font-size: 1.5rem;
+        }
+
+        &-history {
+            font-size: 1rem;
+        }
     }
 }
 

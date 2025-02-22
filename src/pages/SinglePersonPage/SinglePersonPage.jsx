@@ -34,12 +34,14 @@ function SinglePersonPage() {
                             key={person.id}
                             className="personcard-image"
                         />
-                        <p className="personcard-name">{person.name}</p>
-                        <p className="personcard-occupation">{person.occupation}</p>
-                        <div className="personcard-history">
-                            {person.history.map((sentence, index) => (
-                                <p key={index}>{sentence}</p>
-                            ))}
+                        <div className="personcard-content">
+                            <p className="personcard-name">{person.name}</p>
+                            <p className="personcard-occupation">{person.occupation}</p>
+                            <div className="personcard-history">
+                                {person.history.map((sentence, index) => (
+                                    <p key={index}>{sentence}</p>
+                                ))}
+                            </div>
                         </div>
                     </li>
                 </ul>

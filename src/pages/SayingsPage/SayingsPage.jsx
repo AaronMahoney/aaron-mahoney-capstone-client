@@ -34,7 +34,8 @@ function SayingsPage() {
   return (
     <div className="sayings">
       <h1 className="sayings-title">The Way We Speak</h1>
-      <p className="sayings-subhead">Newfoundland is well known for the colourful buildings adorning the downtown area, but just as much for the colourful way that locals speak. Below is a randomizer loaded up with many of the words and phrases locals use daily!</p>
+      <p className="sayings-subhead">Newfoundland is well known for the colourful buildings adorning the downtown area, but just as much for the colourful way that locals speak.</p>
+      <p className="sayings-subhead">Below is a randomizer loaded up with many of the words and phrases locals use daily!</p>
       <iframe
         width="560"
         height="315"
@@ -42,8 +43,8 @@ function SayingsPage() {
         title="YouTube video player"
         allowFullScreen
       ></iframe>
-        <button className="sayings-button"
-          onClick={handleClickButton}>Click for a saying</button>
+      <button className="sayings-button"
+        onClick={handleClickButton}>Click for a saying</button>
     </div>
   )
 }
