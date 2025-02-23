@@ -45,8 +45,9 @@ function GuideBook() {
       <section className="guidebook-section">
         <h1 className="guidebook-section__title">Guidebook</h1>
         <h3 className="guidebook-section__subhead">Yes By!</h3>
-        <img className="guidebook-section__image" src={flags} alt="flags"/>
-        <p className="guidebook-section__text">Thanks for checking out the site, hopefully you learned something. Feel free to leave a comment about Newfoundland, the site itself, or anything else.</p>
+        <img className="guidebook-section__image" src={flags} alt="flags" />
+        <p className="guidebook-section__text">Thanks for checking out the site, hopefully you learned something.</p>
+        <p className="guidebook-section__text">Feel free to leave a comment about Newfoundland, the site itself, or anything else.</p>
         <form className="guidebook-form" onSubmit={handleCommentSubmit}>
           <div className="guidebook-container">
             <label className="guidebook-form__name">Name</label>
