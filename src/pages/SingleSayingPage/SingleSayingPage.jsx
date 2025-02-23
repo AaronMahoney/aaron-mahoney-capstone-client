@@ -29,8 +29,10 @@ function SingleSayingPage() {
         <div className="saying-details">
             <div className="saying-details__card">
                 <h2 className="saying-details__title">{saying.saying_title}</h2>
-                <p className="saying-details__explanation">Explanation: {saying.saying_explanation}</p>
-                <p className="saying-details__used">Example: {saying.saying_used}</p>
+                <div className="saying-details__text">
+                    <p className="saying-details__explanation">Explanation: {saying.saying_explanation}</p>
+                    <p className="saying-details__used">Example: {saying.saying_used}</p>
+                </div>
                 <img className="saying-details__image" src={`${base_URL}/images/${saying.saying_photo}`} />
                 <button className="saying-details__button" onClick={navigateToRandomSaying}>
                     Get Another Saying!
