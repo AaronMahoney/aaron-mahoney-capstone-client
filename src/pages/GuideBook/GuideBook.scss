@@ -14,11 +14,14 @@
 
         &__title {
             font-size: 2rem;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
         &__subhead {
             font-size: 1.25rem;
             font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
         &__image {
@@ -27,8 +30,36 @@
 
         &__text {
             font-size: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
             margin-bottom: 1rem;
         }
+    }
+
+    @include tablet {
+        margin: 0;
+
+        &-section {
+            gap: 1.5rem;
+
+            &__title {
+                font-size: 3rem;
+            }
+
+            &__subhead {
+                font-size: 1.5rem;
+                font-weight: 300;
+            }
+
+            &__image {
+                width: 50%;
+            }
+
+            &__text {
+                font-size: 1.25rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+
     }
 
     &-form {
@@ -62,6 +93,21 @@
         &__area:focus {
             border-color: $nf-green;
         }
+
+        @include tablet {
+            padding: 1rem;
+            margin-bottom: 5rem;
+            width: 75%;
+
+            &__input {
+                height: 3rem;
+                margin-bottom: 1rem;
+            }
+
+            &__area {
+                height: 5rem;
+            }
+        }
     }
 
     &-container {
@@ -70,10 +116,18 @@
         align-items: flex-start;
         width: 100%;
         gap: 0.5rem;
+
+        @include tablet {
+            gap: 0.25rem;
+        }
     }
 
     label {
         margin-bottom: 0.25rem;
         font-weight: bold;
+
+        @include tablet {
+            font-size: 1.2rem;
+        }
     }
 }
