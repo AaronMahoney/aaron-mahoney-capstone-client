@@ -16,7 +16,7 @@
         font-weight: 300;
         margin-bottom: 0.5rem;
         color: $nf-pink;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
     }
 
     &-subhead {
@@ -24,13 +24,13 @@
         text-align: center;
         max-width: 600px;
         color: $nf-pink;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
     }
 
     @include tablet {
         margin: 0;
         padding: 1rem;
-        margin-bottom: 5rem;
+        padding-bottom: 5rem;
 
         &-title {
             font-size: 3rem;
@@ -38,6 +38,21 @@
 
         &-subhead {
             font-size: 1.25rem;
+            max-width: 800px;
+        }
+    }
+
+    @include desktop {
+        padding: 1.5rem;
+        padding-bottom: 6rem;
+
+        &-title {
+            font-size: 4.5rem;
+        }
+
+        &-subhead {
+            font-size: 2rem;
+            max-width: 1025px;
         }
     }
 }
@@ -47,6 +62,14 @@ iframe {
     height: auto;
     max-width: 560px;
     border-radius: 8px;
+
+    @include tablet {
+        max-width: 800px;
+    }
+
+    @include desktop {
+        max-width: 1025px;
+    }
 }
 
 .sayings-button {
@@ -76,5 +99,12 @@ iframe {
         font-size: 1.5rem;
         margin-bottom: 1rem;
         border-radius: 10px;
+    }
+
+    @include desktop {
+        width: 55%;
+        height: 5rem;
+        font-size: 1.75rem;
+        border-radius: 12px;
     }
 }

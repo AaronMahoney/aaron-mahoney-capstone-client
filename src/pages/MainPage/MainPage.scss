@@ -8,8 +8,14 @@
     background-color: #f8f8f8;
 
     @include tablet {
-        margin: 0 2rem;
+        margin: 0;
+        padding: 0 1rem;
         padding-bottom: 4rem;
+    }
+
+    @include desktop {
+        padding: 0 3.5rem;
+        padding-bottom: 5rem;
     }
 }
 
@@ -32,6 +38,10 @@
     @include tablet {
         align-items: flex-start;
     }
+
+    @include desktop {
+        margin-bottom: 3rem;
+    }
 }
 
 .hero::before {
@@ -49,14 +59,19 @@
     position: relative;
     z-index: 2;
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 300;
     margin: 0;
     margin-top: -7rem;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 
     @include tablet {
         font-size: 3.5rem;
+    }
+
+    @include desktop {
+        font-size: 5rem;
+        margin-left: 1rem;
     }
 }
 
@@ -64,9 +79,19 @@
     position: relative;
     z-index: 2;
     font-size: 1.5rem;
+    font-weight: 300;
     margin-top: 0.5rem;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+    @include tablet {
+        font-size: 1.75rem;
+    }
+
+    @include desktop {
+        font-size: 2.5rem;
+        margin-left: 1rem;
+    }
 }
 
 .map-container {

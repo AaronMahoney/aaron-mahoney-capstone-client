@@ -9,7 +9,11 @@
     @include tablet {
         margin: 0;
         width: 100%;
-        margin-bottom: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    @include desktop {
+        padding-bottom: 5rem;
     }
 }
 
@@ -88,6 +92,41 @@
 
         &-history {
             font-size: 1rem;
+        }
+    }
+
+    @include desktop {
+        padding: 1rem;
+
+        &-item {
+            flex-direction: row;
+            align-items: flex-start;
+            margin-top: 2rem;
+            gap: 2rem;
+        }
+
+        &-image {
+            width: 45%;
+            flex-shrink: 0;
+            max-height: 30rem;
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &-name {
+            font-size: 3.5rem;
+        }
+
+        &-occupation {
+            font-size: 2rem;
+        }
+
+        &-history {
+            font-size: 1.25rem;
         }
     }
 }

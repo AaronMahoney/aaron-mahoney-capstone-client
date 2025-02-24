@@ -7,7 +7,7 @@ const base_URL = import.meta.env.VITE_API_URL;
 
 function SinglePlacePage() {
 
-    const {placeId} = useParams();
+    const { placeId } = useParams();
 
     const [place, setPlace] = useState(null)
 
@@ -21,28 +21,29 @@ function SinglePlacePage() {
     }
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         getPlaceById(placeId)
     }, [placeId]);
 
-  return (
-    <div className="placecard-wrapper">
-                {place && (
-                    <ul className="placecard">
-                        <li className="placecard-item">
+    return (
+        <div className="placecard-wrapper">
+            {place && (
+                <ul className="placecard">
+                    <li className="placecard-item">
                         <p className="placecard-title">{place.name}</p>
                         <img
                             src={`${base_URL}/images/${place.picture}`}
                             alt={place.description}
                             key={place.id}
                             className="placecard-image"
-                        /> 
+                        />
                         <p className="placecard-location">{place.location}</p>
                         <p className="placecard-description">{place.description}</p>
-                        </li>
-                    </ul>
-                )}
-            </div>
-  )
+                    </li>
+                </ul>
+            )}
+        </div>
+    )
 }
 
 export default SinglePlacePage;

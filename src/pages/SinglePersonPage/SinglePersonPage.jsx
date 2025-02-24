@@ -20,6 +20,7 @@ function SinglePersonPage() {
     }
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         getPersonById(personId)
     }, [personId]);
 

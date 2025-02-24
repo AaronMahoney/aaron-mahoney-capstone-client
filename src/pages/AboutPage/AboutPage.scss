@@ -9,7 +9,7 @@
     &-title {
         font-size: 3rem;
         font-weight: 300;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
 
     &-text {
@@ -40,6 +40,23 @@
             height: auto;
         }
     }
+
+    @include desktop {
+        margin: 0;
+
+        &-title {
+            font-size: 4.5rem;
+        }
+
+        &-text {
+            font-size: 1.5rem;
+        }
+
+        &-image {
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 
 .aboutpage-container {
@@ -51,14 +68,24 @@
     @include tablet {
         gap: 1.75rem;
     }
+
+    @include desktop {
+        gap: 2rem;
+    }
 }
 
 iframe {
     width: 100%;
-    max-width: 560px;
+    max-width: 550px;
     aspect-ratio: 16 / 9;
 
     @include tablet {
         margin-bottom: 3.5rem;
+        max-width: 600px;
+    }
+
+    @include desktop {
+        margin-bottom: 5rem;
+        max-width: 800px;
     }
 }

@@ -47,7 +47,11 @@
     }
 
     &__image {
-        width: 85%;
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        max-height: 185px;
+        object-fit: cover;
     }
 
     &__button {
@@ -74,7 +78,7 @@
 
     @include tablet {
         margin: 0;
-        margin-bottom: 5rem;
+        padding-bottom: 5rem;
 
         &__card {
             gap: 1.5rem;
@@ -102,7 +106,9 @@
         }
 
         &__image {
-            width: 70%;
+            width: 75%;
+            max-width: 600px;
+            max-height: 475px;
         }
 
         &__button {
@@ -110,6 +116,47 @@
             width: 40%;
             height: 3.75rem;
             font-size: 1.2rem;
+        }
+    }
+
+    @include desktop {
+        padding-bottom: 6rem;
+
+        &__card {
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        &__title {
+            font-size: 4.5rem;
+            max-width: 90%;
+        }
+
+        &__text {
+            gap: 1rem;
+        }
+
+        &__explanation {
+            font-size: 2rem;
+            line-height: 1.8;
+        }
+
+        &__used {
+            font-size: 2rem;
+            line-height: 1.8;
+        }
+
+        &__image {
+            width: 85%;
+            max-width: 900px;
+            max-height: 525px;
+        }
+
+        &__button {
+            width: 55%;
+            height: 5rem;
+            font-size: 1.75rem;
+            border-radius: 12px;
         }
     }
 }
