@@ -28,7 +28,8 @@ function PeoplePage() {
     <div className="peoplepage">
       <h1 className="peoplepage-title">The People</h1>
       <img className="peoplepage-image" src={flag1} alt="old newfoundland flag" />
-      <p className="peoplepage-text">For one of the smaller provinces, Newfoundland has produced a number of notable musicians, actors, athletes, media personalites and politicians in its time. Below are just a few!</p>
+      <p className="peoplepage-text">For one of the smaller provinces, Newfoundland has produced a number of notable musicians, actors, athletes, media personalites and politicians in its time.</p>
+      <p className="peoplepage-text">Below are just a few:</p>
       <ul className="peoplepage-list">
         {people.map((person) => {
           return (

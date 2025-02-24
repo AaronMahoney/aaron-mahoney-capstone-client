@@ -12,11 +12,15 @@
     &-title {
         font-size: 2.5rem;
         margin-bottom: 1rem;
+        color: $nf-green;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
     &-subhead {
         font-size: 1.25rem;
         margin-bottom: 2rem;
+        color: $nf-green;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     @include tablet {
@@ -30,6 +34,19 @@
         &-subhead {
             font-size: 1.5rem;
             margin-bottom: 2.5rem;
+        }
+    }
+
+    @include desktop {
+        margin-bottom: 5rem;
+
+        &-title {
+            font-size: 4.5rem;
+        }
+
+        &-subhead {
+            font-size: 2rem;
+            margin-bottom: 3rem;
         }
     }
 }
