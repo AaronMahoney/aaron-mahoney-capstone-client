@@ -1,0 +1,136 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.single-person__page {
+    margin: 0 0.5rem;
+    background-color: $nf-blue;
+
+    @include tablet {
+        margin: 0;
+        width: 100%;
+        padding-bottom: 4rem;
+    }
+
+    @include desktop {
+        padding-bottom: 5rem;
+    }
+}
+
+.personcard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &-image {
+        width: 100%;
+        height: auto;
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &-name {
+        font-size: 1.5rem;
+        color: $nf-white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    &-occupation {
+        font-size: 1.25rem;
+        color: $nf-white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    &-history {
+        font-size: 1rem;
+        color: $nf-white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    @include tablet {
+
+        &-item {
+            flex-direction: row;
+            align-items: flex-start;
+            margin-top: 1rem;
+            gap: 1rem;
+        }
+
+        &-image {
+            width: 40%;
+            flex-shrink: 0;
+            max-height: 18rem;
+            object-fit: contain;
+        }
+
+        &-content {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &-name {
+            font-size: 2rem;
+        }
+
+        &-occupation {
+            font-size: 1.5rem;
+        }
+
+        &-history {
+            font-size: 1rem;
+        }
+    }
+
+    @include desktop {
+        padding: 1rem;
+
+        &-item {
+            flex-direction: row;
+            align-items: flex-start;
+            margin-top: 2rem;
+            gap: 2rem;
+        }
+
+        &-image {
+            width: 45%;
+            flex-shrink: 0;
+            max-height: 30rem;
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &-name {
+            font-size: 3.5rem;
+        }
+
+        &-occupation {
+            font-size: 2rem;
+        }
+
+        &-history {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+.personcard-history p {
+    margin-bottom: 0.5rem;
+}

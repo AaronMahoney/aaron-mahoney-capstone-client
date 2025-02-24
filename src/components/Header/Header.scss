@@ -1,0 +1,67 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: #f8f8f8;
+
+    @include tablet {
+        padding: 0.5rem;
+    }
+
+    @include desktop {
+        padding: 0.75rem;
+    }
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
+
+    &__list {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__image {
+        width: 4rem;
+        height: auto;
+    }
+
+    @include tablet {
+        justify-content: space-evenly;
+
+        &__list {
+            gap: 5rem;
+            font-size: 1.5rem;
+        }
+
+        &__image {
+            width: 6rem;
+        }
+    }
+
+    @include desktop {
+        justify-content: space-between;
+
+        &__list {
+            gap: 7rem;
+            font-size: 2rem;
+        }
+
+        &__image {
+            width: 8rem;
+        }
+    }
+}

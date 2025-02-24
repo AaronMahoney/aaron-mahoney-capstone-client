@@ -1,0 +1,123 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.placecard-wrapper {
+    margin: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    background-color: #f8f8f8;
+
+    @include tablet {
+        margin: 0;
+    }
+
+    @include desktop {
+        padding: 0 1rem;
+    }
+}
+
+.placecard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $nf-red;
+        padding: 1.5rem;
+        border-radius: 5px;
+        max-width: 800px;
+    }
+
+    &-title {
+        color: $nf-yellow;
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    &-image {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 8px;
+    }
+
+    &-location {
+        color: $nf-yellow;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+
+    &-description {
+        color: $nf-yellow;
+        text-align: center;
+        line-height: 1.5;
+        margin-top: 0.5rem;
+    }
+
+    @include tablet {
+        width: 90%;
+        margin-bottom: 5rem;
+
+        &-item {
+            padding: 1.75rem;
+            max-width: 800px;
+        }
+
+        &-title {
+            font-size: 3rem;
+        }
+
+        &-image {
+            width: 90%;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+
+        &-location {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        &-description {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+
+        }
+    }
+
+    @include tablet {
+        width: 100%;
+        margin-bottom: 7rem;
+
+        &-item {
+            padding: 1.75rem;
+            max-width: 1025px;
+        }
+
+        &-title {
+            font-size: 4.5rem;
+        }
+
+        &-image {
+            width: 95%;
+            max-width: 1025px;
+            border-radius: 12px;
+        }
+
+        &-location {
+            font-size: 2rem;
+            margin-top: 1.75rem;
+        }
+
+        &-description {
+            font-size: 1.5rem;
+            margin-top: 1.2rem;
+        }
+    }
+}
