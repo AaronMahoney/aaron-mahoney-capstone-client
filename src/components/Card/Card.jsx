@@ -29,7 +29,7 @@ function Card() {
                 return (
                     <li key={place.id} className="card-item">
                         <Link to={`/places/${place.id}`}><div className="card-content">
-                        <p className="card-name">{place.name}</p>
+                            <p className="card-name">{place.name}</p>
                             <img
                                 src={`${base_URL}/images/${place.picture}`}
                                 alt={place.description}
