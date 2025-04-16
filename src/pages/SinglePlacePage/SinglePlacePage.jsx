@@ -21,7 +21,6 @@ function SinglePlacePage() {
     }
 
     useEffect(() => {
-        window.scrollTo(0, 0);
         getPlaceById(placeId)
     }, [placeId]);
 
