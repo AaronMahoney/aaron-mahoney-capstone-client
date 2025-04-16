@@ -22,7 +22,6 @@ function SingleSayingPage() {
     };
 
     useEffect(() => {
-        window.scrollTo(0, 0);
         fetchSaying(id);
     }, [id]);
 

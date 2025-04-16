@@ -11,12 +11,14 @@ import PeoplePage from './pages/PeoplePage/PeoplePage.jsx';
 import SinglePersonPage from './pages/SinglePersonPage/SinglePersonPage.jsx';
 import GuideBook from './pages/GuideBook/GuideBook.jsx';
 import Footer from "./components/Footer/Footer.jsx";
+import Scroll from "./components/Scroll/Scroll.jsx";
 
 
 function App() {
 
   return (
     <BrowserRouter>
+      <Scroll />
       <Header />
       <Routes>
         <Route path="/" element={<MainPage />} />
@@ -25,7 +27,7 @@ function App() {
         <Route path="/places/:placeId" element={<SinglePlacePage />} />
         <Route path="/sayings" element={<SayingsPage />} />
         <Route path="/sayings/:id" element={<SingleSayingPage />} />
-        <Route path="/people" element={<PeoplePage />} /> 
+        <Route path="/people" element={<PeoplePage />} />
         <Route path="/people/:personId" element={<SinglePersonPage />} />
         <Route path="/guidebook" element={<GuideBook />} />
       </Routes>
