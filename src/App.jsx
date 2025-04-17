@@ -13,7 +13,6 @@ import GuideBook from './pages/GuideBook/GuideBook.jsx';
 import Footer from "./components/Footer/Footer.jsx";
 import Scroll from "./components/Scroll/Scroll.jsx";
 
-
 function App() {
 
   return (
