@@ -10,7 +10,6 @@ const baseURL = import.meta.env.VITE_API_URL;
 function GuideBook() {
 
   useEffect(() => {
-    window.scrollTo(0, 0);
   }, []);
 
   const [name, setName] = useState("");

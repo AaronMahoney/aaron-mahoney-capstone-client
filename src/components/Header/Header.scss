@@ -65,3 +65,19 @@
         }
     }
 }
+
+.header-auth {
+    position: absolute;
+    top: 5rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+
+    &__button {
+        padding: 0.5rem 1rem;
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+}
