@@ -1,4 +1,7 @@
 import { useState } from "react";
+import axios from 'axios';
+
+const base_URL = import.meta.env.VITE_API_URL;
 
 const Login = ({ onLogin }) => {
 
@@ -11,7 +14,7 @@ const Login = ({ onLogin }) => {
     const loginData = { email, password };
 
     try {
-      const response = await axios.post(`${baseURL}/login`, loginData);
+      const response = await axios.post(`${base_URL}/login`, loginData);
       if (response.status !== 200) throw new Error("Login failed");
 
       onLogin(response.data.user);

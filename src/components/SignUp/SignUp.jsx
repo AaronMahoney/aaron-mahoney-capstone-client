@@ -1,4 +1,7 @@
 import { useState } from "react";
+import axios from 'axios';
+
+const base_URL = import.meta.env.VITE_API_URL;
 
 const SignUp = ({ onSignUp }) => {
     const [name, setName] = useState("");
@@ -8,10 +11,11 @@ const SignUp = ({ onSignUp }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const signupData = { name, email, password };
+        // Pass 'username' instead of 'name' for consistency with the DB schema
+        const signupData = { username: name, email, password };
 
         try {
-            const response = await axios.post(`${baseURL}/signup`, signupData);
+            const response = await axios.post(`${base_URL}/signup`, signupData);
             if (response.status !== 201) throw new Error("Signup failed");
 
             onSignUp(response.data.user);
