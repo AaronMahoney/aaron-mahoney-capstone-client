@@ -1,3 +1,4 @@
+import './SignUp.scss';
 import { useState } from "react";
 import axios from 'axios';
 
@@ -11,7 +12,6 @@ const SignUp = ({ onSignUp }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Pass 'username' instead of 'name' for consistency with the DB schema
         const signupData = { username: name, email, password };
 
         try {

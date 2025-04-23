@@ -1,3 +1,4 @@
+import './Login.scss';
 import { useState } from "react";
 import axios from 'axios';
 
@@ -27,9 +28,22 @@ const Login = ({ onLogin }) => {
   return (
     <form className="login" onSubmit={handleSubmit}>
       <h2 className="login-header">Login:</h2>
-      <input className="login-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-      <input className="login-password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-      <button className="login-button" type="submit">Log In</button>
+      <input 
+      className="login-email" 
+      type="email" 
+      placeholder="Email" 
+      value={email} 
+      onChange={(e) => setEmail(e.target.value)} 
+      required />
+      <input 
+      className="login-password" 
+      type="password" 
+      placeholder="Password" 
+      value={password} 
+      onChange={(e) => setPassword(e.target.value)} 
+      required />
+      <button 
+      className="login-button" type="submit">Log In</button>
     </form>
   )
 };
