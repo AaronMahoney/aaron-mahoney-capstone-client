@@ -14,14 +14,38 @@
 
     &-email,
     &-password {
-        width: 85%;
-        height: 2.5rem;
-        border-radius: 5px;
+        width: 75%;
+        height: 1rem;
+        border-radius: 2.5px;
+
+        @include tablet {
+            width: 85%;
+            height: 1.5rem;
+            border-radius: 3px;
+        }
+
+        @include desktop {
+            width: 85%;
+            height: 2.5rem;
+            border-radius: 5px;
+        }
     }
 
     &-button {
-        width: 50%;
-        height: 2rem;
-        font-size: 1.25rem;
+        width: 75%;
+        height: 1rem;
+        font-size: 0.5rem;
+
+        @include tablet {
+            width: 60%;
+            height: 1.5rem;
+            font-size: 1rem;
+        }
+
+        @include desktop {
+            width: 50%;
+            height: 2rem;
+            font-size: 1.25rem;
+        }
     }
 }
