@@ -6,7 +6,7 @@ import Modal from "../Modal/Modal.jsx";
 import Login from "../Login/Login.jsx";
 import SignUp from "../SignUp/SignUp.jsx";
 
-function Header() {
+function Header({ user, setUser }) {
   const [showLogin, setShowLogin] = useState(false);
   const [showSignUp, setShowSignUp] = useState(false);
 
@@ -30,10 +30,17 @@ function Header() {
             </ul>
           </div>
 
-          <div className="header-auth">
-            <button className="header-auth__button" onClick={() => setShowSignUp(true)}>Sign Up</button>
-            <button className="header-auth__button" onClick={() => setShowLogin(true)}>Login</button>
-          </div>
+          {user ? (
+            <div className="header-auth">
+              <span className="header-auth__welcome">Welcome, {user.username}</span>
+              <button className="header-auth__button" onClick={() => setUser(null)}>Logout</button>
+            </div>
+          ) : (
+            <div className="header-auth">
+              <button className="header-auth__button" onClick={() => setShowSignUp(true)}>Sign Up</button>
+              <button className="header-auth__button" onClick={() => setShowLogin(true)}>Login</button>
+            </div>
+          )}
         </nav>
       </header>
 
@@ -41,6 +48,7 @@ function Header() {
         <Modal onClose={() => setShowLogin(false)}>
           <Login onLogin={(user) => {
             setShowLogin(false);
+            setUser(user);
             console.log("User logged in:", user);
           }} />
         </Modal>

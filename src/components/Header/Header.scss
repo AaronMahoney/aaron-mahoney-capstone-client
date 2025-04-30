@@ -68,16 +68,61 @@
 
 .header-auth {
     position: absolute;
-    top: 5rem;
-    right: 1rem;
     display: flex;
+    top: 0.5rem;
+    right: 0.5rem;
     gap: 0.5rem;
 
+    &__welcome {
+        margin-right: 7.5rem;
+        margin-top: 0.5rem;
+    }
+
     &__button {
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 0.5rem;
         background-color: #ffffff;
         border: 1px solid #ccc;
         border-radius: 4px;
         cursor: pointer;
+    }
+
+    @include tablet {
+
+        top: 0.75rem;
+        right: 0.75rem;
+        gap: 0.5rem;
+
+        &__welcome {
+            margin-right: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        &__button {
+            padding: 0.5rem 0.75rem;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    }
+
+    @include desktop {
+
+        position: absolute;
+        top: 3rem;
+        right: 1rem;
+        display: flex;
+        gap: 0.5rem;
+
+        &__welcome {
+            margin-right: -5rem;
+            margin-top: -2rem;
+        }
+
+        &__button {
+            padding: 0.5rem 1rem;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
     }
 }

@@ -1,4 +1,5 @@
-import './App.scss'
+import './App.scss';
+import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from "./components/Header/Header.jsx";
 import MainPage from "./pages/MainPage/MainPage.jsx";
@@ -14,11 +15,12 @@ import Footer from "./components/Footer/Footer.jsx";
 import Scroll from "./components/Scroll/Scroll.jsx";
 
 function App() {
+  const [user, setUser] = useState(null);
 
   return (
     <BrowserRouter>
       <Scroll />
-      <Header />
+      <Header user={user} setUser={setUser} />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -32,7 +34,7 @@ function App() {
       </Routes>
       <Footer />
     </BrowserRouter>
-  )
+  );
 }
 
 export default App;
